@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel Website Preview</title>
+    <title>Restoran - Laravel Restaurant Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: #e2e8f0;
             line-height: 1.6;
             min-height: 100vh;
             padding: 20px;
@@ -35,7 +35,8 @@
         header h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #f7fafc;
         }
         
         header p {
@@ -43,6 +44,13 @@
             max-width: 600px;
             margin: 0 auto;
             opacity: 0.9;
+            color: #cbd5e0;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #e53e3e;
         }
         
         .main-content {
@@ -55,10 +63,10 @@
         .preview-section {
             flex: 1;
             min-width: 300px;
-            background: white;
+            background: #2d3748;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
         
         .preview-header {
@@ -101,6 +109,7 @@
             align-items: center;
             justify-content: center;
             background: #f7fafc;
+            color: #2d3748;
         }
         
         .preview-image {
@@ -108,22 +117,35 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            border: 1px solid #cbd5e0;
+        }
+        
+        .preview-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .preview-content p {
+            text-align: center;
+            color: #4a5568;
         }
         
         .github-section {
             flex: 1;
             min-width: 300px;
-            background: white;
+            background: #2d3748;
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border: 1px solid #4a5568;
         }
         
         .github-section h2 {
-            color: #4a5568;
+            color: #f7fafc;
             margin-bottom: 20px;
             font-size: 1.8rem;
             display: flex;
@@ -132,12 +154,12 @@
         
         .github-section h2 i {
             margin-right: 10px;
-            color: #333;
+            color: #e53e3e;
         }
         
         .github-section p {
             margin-bottom: 25px;
-            color: #718096;
+            color: #cbd5e0;
         }
         
         .steps {
@@ -151,7 +173,7 @@
         }
         
         .step-number {
-            background: #667eea;
+            background: #e53e3e;
             color: white;
             width: 28px;
             height: 28px;
@@ -167,9 +189,19 @@
             flex: 1;
         }
         
+        .step-content h3 {
+            color: #f7fafc;
+            margin-bottom: 5px;
+        }
+        
+        .step-content p {
+            color: #cbd5e0;
+            margin-bottom: 0;
+        }
+        
         .btn {
             display: inline-block;
-            background: #667eea;
+            background: #e53e3e;
             color: white;
             padding: 12px 25px;
             border-radius: 30px;
@@ -182,9 +214,9 @@
         }
         
         .btn:hover {
-            background: #5a67d8;
+            background: #c53030;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         .btn i {
@@ -193,12 +225,12 @@
         
         .btn-outline {
             background: transparent;
-            border: 2px solid #667eea;
-            color: #667eea;
+            border: 2px solid #e53e3e;
+            color: #e53e3e;
         }
         
         .btn-outline:hover {
-            background: #667eea;
+            background: #e53e3e;
             color: white;
         }
         
@@ -212,29 +244,58 @@
         .feature {
             flex: 1;
             min-width: 250px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(74, 85, 104, 0.3);
             backdrop-filter: blur(10px);
             border-radius: 10px;
             padding: 20px;
             color: white;
+            border: 1px solid #4a5568;
         }
         
         .feature h3 {
             margin-bottom: 15px;
             display: flex;
             align-items: center;
+            color: #f7fafc;
         }
         
         .feature h3 i {
             margin-right: 10px;
+            color: #e53e3e;
+        }
+        
+        .feature p {
+            color: #cbd5e0;
         }
         
         footer {
             text-align: center;
             margin-top: 50px;
             padding: 20px;
-            color: white;
+            color: #cbd5e0;
             opacity: 0.8;
+        }
+        
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tech-item {
+            display: flex;
+            align-items: center;
+            background: rgba(74, 85, 104, 0.3);
+            padding: 10px 15px;
+            border-radius: 30px;
+            color: #cbd5e0;
+        }
+        
+        .tech-item i {
+            margin-right: 8px;
+            color: #e53e3e;
         }
         
         @media (max-width: 768px) {
@@ -245,14 +306,29 @@
             header h1 {
                 font-size: 2.2rem;
             }
+            
+            .tech-stack {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Laravel Website Preview</h1>
-            <p>Showcase your Laravel project with free GitHub integration</p>
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h1>Restoran Laravel Project</h1>
+            <p>A complete restaurant management system built with Laravel</p>
+            
+            <div class="tech-stack">
+                <div class="tech-item"><i class="fab fa-laravel"></i> Laravel</div>
+                <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
+                <div class="tech-item"><i class="fas fa-paint-brush"></i> Bootstrap</div>
+                <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
+            </div>
         </header>
         
         <div class="main-content">
@@ -263,72 +339,91 @@
                         <div class="dot yellow"></div>
                         <div class="dot green"></div>
                     </div>
-                    <div>your-laravel-app.com</div>
+                    <div>restoran-app.com</div>
                     <div></div>
                 </div>
                 <div class="preview-content">
-                    <img src="https://via.placeholder.com/600x300/667eea/ffffff?text=Laravel+App+Preview" alt="Laravel App Preview" class="preview-image">
-                    <p>Your Laravel application preview would appear here</p>
+                    <img src="https://via.placeholder.com/600x300/edf2f7/2d3748?text=Restoran+Laravel+App" alt="Restoran Laravel App Preview" class="preview-image">
+                    <h3>Restaurant Management System</h3>
+                    <p>This Laravel application includes menu management, table reservations, order tracking, and customer management features.</p>
                 </div>
             </div>
             
             <div class="github-section">
                 <h2><i class="fab fa-github"></i> GitHub Integration</h2>
-                <p>Enable visitors to preview your Laravel website directly from GitHub with these simple steps:</p>
+                <p>Explore the Restoran Laravel project on GitHub and learn how to set it up for your own restaurant business.</p>
                 
                 <div class="steps">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h3>Create a GitHub Repository</h3>
-                            <p>Upload your Laravel project code to a public GitHub repository</p>
+                            <h3>Visit the Repository</h3>
+                            <p>Explore the codebase and structure of the Restoran project</p>
                         </div>
                     </div>
                     
                     <div class="step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>Use GitHub Pages</h3>
-                            <p>Enable GitHub Pages in your repository settings for free hosting</p>
+                            <h3>Clone or Fork</h3>
+                            <p>Get your own copy of the project to customize it</p>
                         </div>
                     </div>
                     
                     <div class="step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h3>Share the Link</h3>
-                            <p>Share the GitHub Pages URL with anyone who wants to preview your site</p>
+                            <h3>Set Up Locally</h3>
+                            <p>Follow the installation instructions to run it on your local server</p>
                         </div>
                     </div>
                 </div>
                 
-                <a href="#" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+                <a href="https://github.com/yassin-elkhamlichi/Restoran" target="_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
                 
                 <p style="margin-top: 20px; font-size: 0.9rem;">
-                    Alternatively, you can use services like Netlify or Vercel for automatic deployments from GitHub.
+                    The repository includes detailed installation instructions and documentation.
                 </p>
             </div>
         </div>
         
         <div class="features">
             <div class="feature">
-                <h3><i class="fas fa-rocket"></i> Free Hosting</h3>
-                <p>GitHub Pages provides free hosting for static websites, perfect for showcasing your Laravel frontend.</p>
+                <h3><i class="fas fa-list-alt"></i> Menu Management</h3>
+                <p>Easily create, update, and organize your restaurant menu with categories, prices, and descriptions.</p>
             </div>
             
             <div class="feature">
-                <h3><i class="fas fa-sync-alt"></i> Automatic Updates</h3>
-                <p>Every time you push updates to GitHub, your live preview will automatically update.</p>
+                <h3><i class="fas fa-calendar-alt"></i> Reservation System</h3>
+                <p>Allow customers to book tables online with a fully featured reservation system.</p>
             </div>
             
             <div class="feature">
-                <h3><i class="fas fa-code-branch"></i> Version Control</h3>
-                <p>Visitors can browse your code and see different versions of your project.</p>
+                <h3><i class="fas fa-receipt"></i> Order Tracking</h3>
+                <p>Manage orders from placement to completion with status updates and kitchen display.</p>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3><i class="fas fa-users"></i> Customer Management</h3>
+                <p>Maintain customer database, order history, and preferences for better service.</p>
+            </div>
+            
+            <div class="feature">
+                <h3><i class="fas fa-chart-bar"></i> Reporting</h3>
+                <p>Generate sales reports, track popular menu items, and analyze business performance.</p>
+            </div>
+            
+            <div class="feature">
+                <h3><i class="fas fa-mobile-alt"></i> Responsive Design</h3>
+                <p>Works perfectly on desktop, tablet, and mobile devices for both staff and customers.</p>
             </div>
         </div>
         
         <footer>
-            <p>© 2023 Laravel Website Preview | Free GitHub Integration</p>
+            <p>© 2023 Restoran Laravel Project | Created by Yassin Elkhamlichi</p>
+            <p>This project is open source and available under the MIT License</p>
         </footer>
     </div>
 
@@ -360,6 +455,21 @@
                 previewSection.style.opacity = 1;
                 previewSection.style.transform = 'translateX(0)';
             }, 500);
+            
+            // Animate features
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                setTimeout(() => {
+                    feature.style.opacity = 1;
+                    feature.style.transform = 'translateY(0)';
+                }, 500 + (index * 150));
+            });
+            
+            features.forEach(feature => {
+                feature.style.opacity = 0;
+                feature.style.transform = 'translateY(20px)';
+                feature.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
         });
     </script>
 </body>
