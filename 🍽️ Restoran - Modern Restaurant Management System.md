@@ -34,7 +34,7 @@ Experience the full functionality of Restoran with our live demonstration. Explo
 
 - **Backend**: Laravel 10.x (PHP 8.1+)
 - **Frontend**: HTML5, CSS3, JavaScript, Bootstrap
-- **Database**: MySQL/PostgreSQL/SQLite
+- **Database**: MySQL
 - **Authentication**: Laravel Sanctum with 2FA support
 - **Styling**: Custom CSS with Bootstrap framework
 - **Package Manager**: Composer (PHP), npm (Node.js)
@@ -47,17 +47,8 @@ Before installation, ensure your system meets these requirements:
 - Composer
 - Node.js and npm
 - Web server (Apache/Nginx) or use PHP built-in server
-- Database (MySQL, PostgreSQL, or SQLite)
+- Database (MySQL)
 
-### Required PHP Extensions
-- DOM
-- XML
-- cURL
-- SQLite3 (for SQLite) or MySQL/PostgreSQL drivers
-- Mbstring
-- OpenSSL
-- PDO
-- Tokenizer
 
 ## ⚡ Quick Installation
 
@@ -87,17 +78,7 @@ php artisan key:generate
 
 ### 4. Database Setup
 
-#### Option A: SQLite (Recommended for Development)
-```bash
-# Create SQLite database file
-touch database/database.sqlite
-
-# Update .env file
-DB_CONNECTION=sqlite
-DB_DATABASE=/absolute/path/to/your/project/database/database.sqlite
-```
-
-#### Option B: MySQL/PostgreSQL
+#### MySQL
 ```bash
 # Update .env file with your database credentials
 DB_CONNECTION=mysql
@@ -221,14 +202,6 @@ php artisan test
 php artisan test --coverage
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ### Development Guidelines
 - Follow Laravel coding standards
 - Write descriptive commit messages
@@ -245,12 +218,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Framework**: [Laravel](https://laravel.com)
 - **UI Framework**: [Bootstrap](https://getbootstrap.com)
 
-## 📞 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Contact: info@example.com
-- Phone: +1012 345 67890
 
 ## 🔄 Changelog
 
@@ -264,5 +231,4 @@ For support and questions:
 
 ---
 
-**Made with ❤️ for the restaurant industry**
 
