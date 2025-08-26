@@ -24,14 +24,6 @@ A comprehensive restaurant management web application built with Laravel, featur
 - **Notification System** - Real-time alerts for bookings and inquiries
 - **Chef Management** - Maintain staff profiles and information
 
-<-- 
-## 🚀 Live Demo
-
-**[View Live Demo](https://8000-igujukc2bvk6akz83zn45-c55d69fc.manusvm.computer)**
-
-Experience the full functionality of Restoran with our live demonstration. Explore the responsive design, browse the menu, and test the user interface across different devices. 
--->
-
 ## 🛠️ Technology Stack
 
 - **Backend**: Laravel 10.x (PHP 8.1+)
